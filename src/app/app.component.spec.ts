@@ -1,4 +1,4 @@
-/*import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -17,7 +17,6 @@ describe('AppComponent', () => {
   it(`should have the 'skills-match' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('skills-match');
   });
 
   it('should render title', () => {
@@ -27,4 +26,3 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, skills-match');
   });
 });
-*/

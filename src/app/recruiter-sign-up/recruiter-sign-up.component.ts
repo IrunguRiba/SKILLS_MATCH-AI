@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterModule } from '@angular/router';  // Add RouterModule here
+import { RouterLink, RouterModule } from '@angular/router';  
 
 @Component({
   selector: 'app-recruiter-sign-up',
@@ -11,7 +11,7 @@ import { RouterLink, RouterModule } from '@angular/router';  // Add RouterModule
   imports: [
     ReactiveFormsModule,
     CommonModule,
-    RouterModule,  // Ensure RouterModule is imported here
+    RouterModule,  
   ],
 })
 export class RecruiterSignUpComponent {
