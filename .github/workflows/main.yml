@@ -1,4 +1,4 @@
-name: Angular CI/CD
+name: Skills_Match AI project
 
 on:
   push:
