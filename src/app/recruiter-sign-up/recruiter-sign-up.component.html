@@ -1,8 +1,6 @@
-<!-- Font Awesome link for icons (this won't affect your styles) -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="signup-form">
-
   <div class="header">
     <h3>Sign Up with</h3>
     <button type="button" class="googleBtn">
@@ -56,8 +54,9 @@
       You must agree to the terms
     </div>
   </div>
-
   <div class="submit">
-    <button class="submitBtn" type="submit" [disabled]="form.invalid">Get Started</button>
+    <a [routerLink]="form.valid ? ['/recruiterLandingPage'] : null" class="no-style-link">
+      <button class="submitBtn" type="button" [disabled]="form.invalid">Get Started</button>
+    </a>
   </div>
 </form>

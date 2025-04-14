@@ -1,35 +1,36 @@
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" /> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()" class="signup-form">
+<form [formGroup]="form" class="signup-form" (ngSubmit)="onSubmit()">
+  <div class="header">
+    <h3 style="color: brown;">THIS PAGE IS FOR STAFF ONLY</h3>
+  </div>
 
-    <div class="header">
-      <h3 style="color: brown;">THIS PAGE IS FOR STAFF ONLY</h3>
-    </div>
-  
-    <div class="or-separator">
-      <hr />
-      <span>OR</span>
-      <hr />
-    </div>
-  
-    <h2 class="form-heading">SIGN IN</h2>
-  
-    <h4>Email Address</h4>
-    <input type="text" placeholder="Email Address" class="inputField" formControlName="emailAddress" />
-    <div *ngIf="form.controls['emailAddress'].touched && form.controls['emailAddress'].invalid" class="text-danger">
-      <span *ngIf="form.controls['emailAddress'].errors?.['required']">Email cannot be empty</span>
-      <span *ngIf="form.controls['emailAddress'].errors?.['email']">Enter a valid email</span>
-    </div>
-  
-    <h4>Password</h4>
-    <input type="password" placeholder="Password" class="inputField" formControlName="password" />
-    <div *ngIf="form.controls['password'].touched && form.controls['password'].invalid" class="text-danger">
-      <span *ngIf="form.controls['password'].errors?.['required']">Password cannot be empty</span>
-      <span *ngIf="form.controls['password'].errors?.['minlength']">Password must be at least 6 characters</span>
-    </div>
-  
-    <div class="submit">
-      <button class="submitBtn" type="submit" [disabled]="form.invalid">Sign In</button>
-    </div>
-  </form>
-  
+  <div class="or-separator">
+    <hr />
+    <span>CONTINUE</span>
+    <hr />
+  </div>
+
+  <h2 class="form-heading">SIGN IN</h2>
+
+  <h4>Email Address</h4>
+  <input type="text" placeholder="Email Address" class="inputField" formControlName="emailAddress" />
+  <div *ngIf="form.controls['emailAddress'].touched && form.controls['emailAddress'].invalid" class="text-danger">
+    <span *ngIf="form.controls['emailAddress'].errors?.['required']">Email cannot be empty</span>
+    <span *ngIf="form.controls['emailAddress'].errors?.['email']">Enter a valid email</span>
+  </div>
+
+  <h4>Password</h4>
+  <input type="password" placeholder="Password" class="inputField" formControlName="password" />
+  <div *ngIf="form.controls['password'].touched && form.controls['password'].invalid" class="text-danger">
+    <span *ngIf="form.controls['password'].errors?.['required']">Password cannot be empty</span>
+    <span *ngIf="form.controls['password'].errors?.['minlength']">Password must be at least 6 characters</span>
+  </div>
+
+  <div class="submit">
+    <a [routerLink]="form.valid ? ['/adminLandingPage'] : null"  (click)="form.invalid && $event.preventDefault()"
+      class="no-style-link">
+      <button class="submitBtn" type="button" [disabled]="form.invalid">Sign In</button>
+    </a>
+  </div>
+</form>

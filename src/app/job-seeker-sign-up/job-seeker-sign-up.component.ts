@@ -11,12 +11,11 @@ import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angula
 })
 export class JobSeekerSignUpComponent {
 
-
   form = new FormGroup({
     firstName: new FormControl('', [Validators.required]),
     lastName: new FormControl('', [Validators.required, Validators.minLength(1)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]), // Added password field
+    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     city: new FormControl(''),
     state: new FormControl(''),
     isAgree: new FormControl(true)

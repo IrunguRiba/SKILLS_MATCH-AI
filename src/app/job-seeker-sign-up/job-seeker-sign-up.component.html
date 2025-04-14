@@ -69,13 +69,9 @@
       <input type="text" id="state" class="form-control" formControlName="state" placeholder="County">
     </div>
   </div>
-
-  <!-- Terms & Conditions -->
   <div class="form-group form-check">
     <label class="form-check-label" for="isAgree">I agree to the Terms and Conditions</label>
     <input type="checkbox" id="isAgree" class="form-check-input" formControlName="isAgree">
   </div>
-
-  <!-- Submit -->
-  <button type="submit" class="btn btn-primary w-100" [disabled]="!form.valid" style="margin-left: 180px; top:20px">Get Started</button>
+  <button type="submit" class="btn btn-primary w-100" [disabled]="!form.valid" style="margin-left: 180px; top:20px; width: auto;">Get Started</button>
 </form>

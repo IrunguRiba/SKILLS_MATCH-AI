@@ -36,7 +36,9 @@
     <span *ngIf="form.controls['password'].errors?.['minlength']">Password must be at least 6 characters</span>
   </div>
   <div class="submit">
-    <button class="submitBtn" type="submit" [disabled]="form.invalid">Sign In</button>
+    <a [routerLink]="form.valid ? ['/recruiterLandingPage'] : null" class="no-style-link">
+      <button class="submitBtn" type="button" [disabled]="form.invalid">Sign In</button>
+    </a>
   </div>
 </form>
 <footer>
