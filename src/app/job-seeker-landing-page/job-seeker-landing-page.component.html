@@ -1,1 +1,26 @@
-<p>job-seeker-landing-page works!</p>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+
+<header>
+  <div><img [src]="logoImage" alt="Logo" class="logoImg" /></div>
+  <div><h3 class="welcomeMessage">Welcome back, Joel</h3></div>
+  <div class="profile">
+    <img [src]="userProfile" alt="Profile Pic" class="profileImg" />
+    Profile
+    <div class="dropdown">
+      <button class="dropbtn">▼</button>
+      <div class="dropdown-content">
+        <a href="#"><i class="fas fa-cog"></i> SETTING</a>
+        <a href="#"><i class="fas fa-edit"></i> UPDATE</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> LOG OUT</a>
+      </div>
+    </div>
+  </div>
+</header>
+  <nav class="navbar">
+    <button class="nav-btn"><i class="fas fa-home"></i> HOME</button>
+    <button class="nav-btn"><i class="fas fa-robot"></i> ASK AI</button>
+    <button class="nav-btn"><i class="fas fa-bell"></i> NOTIFICATIONS</button>
+    <button class="nav-btn"><i class="fas fa-folder-open"></i> MY FILES</button>
+  </nav>

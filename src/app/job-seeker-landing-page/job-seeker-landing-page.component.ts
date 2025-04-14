@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './job-seeker-landing-page.component.css'
 })
 export class JobSeekerLandingPageComponent {
-
+logoImage:string='BackgroundImg.png'
+userProfile:string='user.png'
 }
