@@ -1,0 +1,184 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 14px; 
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin: 10px;
+}
+
+.googleBtn {
+    background-color: transparent;
+    color:rgb(63, 141, 80); 
+}
+
+.googleBtn i {
+    font-size: 32px;
+    background-color: transparent;
+    animation: googleColorCycle 4s infinite linear;
+  }
+    
+  @keyframes googleColorCycle {
+    0%   { color: #4285F4; } 
+    25%  { color: #34A853; } 
+    50%  { color: #FBBC05; } 
+    75%  { color: #EA4335; } 
+    100% { color: #4285F4; }
+  }
+
+.linkedInBtn {
+    background-color: transparent;
+    color: #0077B5; 
+}
+
+.linkedInBtn i {
+    font-size: 32px;
+    transition: transform 0.5s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover i {
+    transform: scale(1.1);
+}
+
+.header h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+.or-separator {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    margin: 1px 0; 
+}
+
+.or-separator hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid white;
+    opacity: 0.6;
+}
+
+.or-separator span {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.form-heading {
+    text-align: center;
+    color: rgb(143, 141, 9);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.signup-form {
+    width: 100%;
+    margin: auto;
+    animation: slideIn 1.2s ease-in-out;
+    font-family: 'Peddana', serif;
+    font-size:medium;
+    font-style:normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-form h4 {
+    margin: 15px 0 5px;
+    font-size: 16px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField {
+    width: 40%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: -6px;
+    outline: none;
+    background-color: rgb(206, 201, 194);
+}
+
+.checkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: rgb(197, 170, 177);
+}
+
+ .checkBox .terms {
+    margin-top: 14px;
+    font-size: 42px;
+    color: rgb(170, 159, 159);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.submitBtn{
+    color: wheat;
+    background-color: RGB(5, 7, 18, 0.6);
+}
+.text-danger {
+    color: red;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 14px;
+    min-height: 18px;
+  }
+  .text-danger {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+  
+  .text-danger.ng-animate {
+    opacity: 0;
+  }
+  

@@ -1,0 +1,84 @@
+<img [src]="logoImage" height="20%" width="30%" alt="AngularImage" class="logoImg" />
+
+<div class="LandingPageSlogan">
+  <p class="slogan">
+    <span class="white-text">UNLOCK POTENTIAL, MATCH SKILLS</span><br />
+    <span class="yellow-text">Where Talent Meets Opportunity. Just pure skill-driven success.</span>
+  </p>
+</div>
+
+<main>
+  <h3 class="white-text glow-text">
+    <span class="sign-up-link">Sign Up to Join the Community</span>
+  </h3>
+
+  <div style="display: flex; gap: 40px;">
+    <div class="signUpLink">
+      <h4 class="yellow-text">I'm Looking for a Job</h4>
+      <a [routerLink]="['/jobSeeker']">
+        <img
+          [src]="jobSeekerSignUplinkImage"
+          alt="Job Seeker Sign Up"
+          class="linkImg"
+        />
+      </a>
+    </div>
+    <div class="signUpLink">
+      <h4 class="yellow-text">I'm Hiring</h4>
+      <a [routerLink]="['/recruiterSignUp']">
+        <img [src]="recruiterSignUplinkImage" alt="Recruiter Sign Up" class="linkImg" />
+      </a>
+    </div>
+  </div>
+
+  <h3 class="white-text" style="margin-top: 40px;">I Have an Account</h3>
+  <div style="display: flex; gap: 40px;">
+    <div class="signUpLink">
+      <h4 class="yellow-text">I'm Looking for a Job</h4>
+      <a [routerLink]="['/jobSeekerSignIn']">
+        <img [src]="jobSeekerSignInlinkImage" alt="Job Seeker Sign In" class="linkImg" />
+      </a>
+    </div>
+    <div class="signUpLink">
+      <h4 class="yellow-text">I'm Hiring</h4>
+      <a [routerLink]="['/recruiterSignIn']">
+        <img [src]="recruiterSignInlinkImage" alt="Recruiter Sign In" class="linkImg" />
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-images">
+    <div class="footer-item">
+      <h4 class="footer-name">FAQ</h4>
+      <a [routerLink]="['/faq']">
+        <img [src]="faqImg" alt="FAQ Image" class="footer-img" />
+      </a>
+    </div>
+    <div class="footer-item">
+      <h4 class="footer-name">Resources</h4>
+      <a [routerLink]="['/resources']">
+        <img [src]="resourceImage" alt="Resource Image" class="footer-img" />
+      </a>
+    </div>
+    <div class="footer-item">
+      <h4 class="footer-name">Support</h4>
+      <a [routerLink]="['/support']">
+        <img [src]="supportImage" alt="Support Image" class="footer-img" />
+      </a>
+    </div>
+    <div class="footer-item">
+      <h4 class="footer-name">Testimonials</h4>
+      <a [routerLink]="['/testimonials']">
+        <img [src]="testimonialsImage" alt="Testimonials Image" class="footer-img" />
+      </a>
+    </div>
+    <div class="footer-item">
+      <h4 class="footer-name">Privacy</h4>
+      <a [routerLink]="['/privacy']">
+        <img [src]="privacyImage" alt="Privacy Image" class="footer-img" />
+      </a>
+    </div>
+  </div>
+</footer>

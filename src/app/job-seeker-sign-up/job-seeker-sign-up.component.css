@@ -1,0 +1,263 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center; 
+}
+
+
+button {
+    padding: 15px 30px;
+    font-size: 14px; 
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin: 10px;
+}
+
+.googleBtn {
+    background-color: transparent;
+    color:rgb(63, 141, 80); 
+}
+
+.googleBtn i {
+    font-size: 32px;
+    background-color: transparent;
+    animation: googleColorCycle 4s infinite linear;
+  }
+    
+  @keyframes googleColorCycle {
+    0%   { color: #4285F4; } 
+    25%  { color: #34A853; } 
+    50%  { color: #FBBC05; } 
+    75%  { color: #EA4335; } 
+    100% { color: #4285F4; }
+  }
+
+.linkedInBtn {
+    background-color: transparent;
+    color: #0077B5; 
+}
+
+.linkedInBtn i {
+    font-size: 32px;
+    transition: transform 0.5s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover i {
+    transform: scale(1.1);
+}
+
+.header h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+
+form{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDelayed1 {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDelayed2 {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDelayed3 {
+    0% { opacity: 0; transform: translateY(60px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h2, .signup-header {
+    text-align: center;
+    animation: fadeInDelayed1 0.8s ease-out forwards;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.social-signin {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    flex-wrap: wrap;
+    animation: fadeInDelayed2 1s ease-out forwards;
+}
+.google-btn, .linkedin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+}
+.google-btn {
+    background-color: transparent;
+    color: #fff;
+}
+.linkedin-btn {
+    background-color:transparent;
+    color: #fff;
+}
+.or-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+.or-separator hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    width: 100%;
+}
+.or-separator span {
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+  
+}
+form {
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeInDelayed2 1s ease-out forwards;
+}
+.custom-form {
+    background-color: #837373;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    animation: fadeIn 1s ease-out forwards;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Input Fields */
+.form-group {
+    margin-bottom: 10px;
+    width: 100%;
+    animation: fadeInDelayed3 1.2s ease-out forwards;
+    max-width: 100%;
+}
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+.form-control {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    background-color: rgb(184, 173, 173);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus {
+    border-color: #101110;
+    background-color: rgb(172, 165, 165);
+    box-shadow: 0px 3px 6px rgba(21, 22, 21, 0.3);
+    outline: none;
+}
+
+/* Error Message */
+.text-danger {
+    font-size: 12px;
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+/* Form Row (First/Last Name) */
+.form-row {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.form-row .form-group {
+    flex: 1;
+    min-width: 120px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 13px;
+}
+button[type="submit"], .btn {
+    background-color: rgba(5, 7, 18, 0.66);
+    color: white;
+    padding: 20px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeInDelayed3 1.2s ease-out forwards;
+}
+button[type="submit"]:hover {
+    background-color: #021303;
+    transform: translateY(-1px);
+}
+button[disabled] {
+    background-color: rgba(5, 7, 18, 0.66);
+    cursor: not-allowed;
+}
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    .social-signin {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .google-btn, .linkedin-btn {
+        width: 100%;
+    }
+}

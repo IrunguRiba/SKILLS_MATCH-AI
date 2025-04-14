@@ -1,0 +1,30 @@
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-job-seeker-sign-in',
+  standalone: true,
+  templateUrl: './job-seeker-sign-in.component.html',
+  styleUrls: ['./job-seeker-sign-in.component.css'],
+  imports: [
+    ReactiveFormsModule,  // for formGroup, formControl
+    CommonModule,         // for *ngIf, *ngFor, etc.
+    RouterLink            // for [routerLink]
+  ]
+})
+export class JobSeekerSignInComponent {
+  form = new FormGroup({
+    emailAddress: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+  });
+
+  onSubmit() {
+    if (this.form.valid) {
+      console.log(this.form.value);
+    } else {
+      this.form.markAllAsTouched();
+    }
+  }
+}

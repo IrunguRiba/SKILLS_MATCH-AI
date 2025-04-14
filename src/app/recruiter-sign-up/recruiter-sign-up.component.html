@@ -1,0 +1,63 @@
+<!-- Font Awesome link for icons (this won't affect your styles) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="signup-form">
+
+  <div class="header">
+    <h3>Sign Up with</h3>
+    <button type="button" class="googleBtn">
+      Google
+      <i class="fa-brands fa-google fa-beat-fade"></i>
+    </button>
+    <button type="button" class="linkedInBtn">
+      Linked In
+      <i class="fab fa-linkedin fa-beat-fade"></i>
+    </button>
+  </div>
+
+  <div class="or-separator">
+    <hr />
+    <span>OR</span>
+    <hr />
+  </div>
+
+  <h2 class="form-heading">SIGN UP HERE</h2>
+
+  <h4>Company Name</h4>
+  <input type="text" placeholder="Company Name" class="inputField" formControlName="companyName" />
+  <div *ngIf="form.controls['companyName'].touched && form.controls['companyName'].invalid" class="text-danger">
+    Company name cannot be empty
+  </div>
+
+  <h4>Email Address</h4>
+  <input type="text" placeholder="Email Address" class="inputField" formControlName="emailAddress" />
+  <div *ngIf="form.controls['emailAddress'].touched && form.controls['emailAddress'].invalid" class="text-danger">
+    <span *ngIf="form.controls['emailAddress'].errors?.['required']">Email cannot be empty</span>
+    <span *ngIf="form.controls['emailAddress'].errors?.['email']">Enter a valid email</span>
+  </div>
+
+  <h4>Password</h4>
+  <input type="password" placeholder="Password" class="inputField" formControlName="password" />
+  <div *ngIf="form.controls['password'].touched && form.controls['password'].invalid" class="text-danger">
+    <span *ngIf="form.controls['password'].errors?.['required']">Password cannot be empty</span>
+    <span *ngIf="form.controls['password'].errors?.['minlength']">Password must be at least 6 characters</span>
+  </div>
+
+  <h4>Company Location</h4>
+  <input type="text" placeholder="City or County" class="inputField" formControlName="companyLocation" />
+  <div *ngIf="form.controls['companyLocation'].touched && form.controls['companyLocation'].invalid" class="text-danger">
+    Location cannot be empty
+  </div>
+
+  <div class="checkBox">
+    <h4>Agree To Terms and Conditions</h4>
+    <input type="checkbox" class="terms" formControlName="isAgree" />
+    <div *ngIf="form.controls['isAgree'].touched && form.controls['isAgree'].invalid" class="text-danger">
+      You must agree to the terms
+    </div>
+  </div>
+
+  <div class="submit">
+    <button class="submitBtn" type="submit" [disabled]="form.invalid">Get Started</button>
+  </div>
+</form>

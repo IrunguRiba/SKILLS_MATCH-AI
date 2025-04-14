@@ -1,0 +1,174 @@
+.logoImg {
+    margin: 29px;
+    filter: brightness(50%);
+    width: 252px;
+    height: 162px;
+  }
+  .linkImg {
+    width: 15px;
+    height: 15px;
+    margin-top: 19px;
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+    animation: blink 2s infinite ease-in-out;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }  
+  .LandingPageSlogan {
+    margin-top: -170px;
+  }
+  
+  .slogan {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Trispace', sans-serif;
+  }
+  
+  .slogan br {
+    display: block;
+  }
+  
+  .slogan span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: eraseAndReturn 3s ease-in-out forwards;
+  }
+  
+  .white-text {
+    color: white;
+    letter-spacing: 10px;
+    animation-delay: 0s;
+  }
+  
+  .yellow-text {
+    font-style: italic;
+    color: rgba(255, 255, 0, 0.466);
+    animation-delay: 3s;
+  }
+  
+  @keyframes eraseAndReturn {
+    0% {
+      width: 100%;
+    }
+    50% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}  
+main h1{
+    color: rgb(192, 207, 207);
+}
+main h1 .white-text{
+    letter-spacing: 1px;
+}
+main h1 .yellow-text{
+    letter-spacing: 1px;
+}
+.signUpLink{
+    display: flex;
+    
+}
+.glow-text {
+  position: relative;
+  font-weight: bold;
+  font-family: 'Trispace', sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.3) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.3) 60%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% auto;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation: lightSweep 6s ease-in-out infinite;
+}
+
+@keyframes lightSweep {
+  0% {
+    background-position: -150% center;
+  }
+  100% {
+    background-position: 150% center;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-images {
+  display: flex;
+  justify-content: space-around; 
+  gap: 40px;
+  width: 100%; 
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-name {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+  animation: shake 4s ease-in-out infinite;
+  animation-delay: 3s; 
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  90% {
+    transform: translateX(0); 
+  }
+}
