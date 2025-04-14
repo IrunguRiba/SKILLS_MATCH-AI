@@ -1,13 +1,14 @@
-name: CI/CD Pipeline
+name: Angular CI/CD
 
 on:
   push:
     branches:
-      - main
+      - master  # or 'main' if that's your branch
   pull_request:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +21,16 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run tests
-        run: npm test
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Run Lint
+        run: ng lint
+
+      - name: Run Tests
+        run: ng test --watch=false --browsers=ChromeHeadless
+
+      - name: Build Angular app
+        run: ng build --configuration production
