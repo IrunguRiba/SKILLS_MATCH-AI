@@ -9,9 +9,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './job-seeker-sign-in.component.html',
   styleUrls: ['./job-seeker-sign-in.component.css'],
   imports: [
-    ReactiveFormsModule,  // for formGroup, formControl
-    CommonModule,         // for *ngIf, *ngFor, etc.
-    RouterLink            // for [routerLink]
+    ReactiveFormsModule,  
+    CommonModule,         
+    RouterLink            
   ]
 })
 export class JobSeekerSignInComponent {
