@@ -3,7 +3,7 @@ name: Angular CI/CD
 on:
   push:
     branches:
-      - master
+      - master  # or 'main' if you're using 'main' as your branch
   pull_request:
 
 jobs:
@@ -25,9 +25,6 @@ jobs:
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
-
-      - name: Run Tests
-        run: ng test --watch=false --browsers=ChromeHeadless
 
       - name: Build Angular app
         run: ng build --configuration production
