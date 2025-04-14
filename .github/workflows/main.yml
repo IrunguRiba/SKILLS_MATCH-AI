@@ -3,7 +3,7 @@ name: Skills_Match AI project
 on:
   push:
     branches:
-      - master  # or 'main' if you're using 'main' as your branch
+      - master
   pull_request:
 
 jobs:
