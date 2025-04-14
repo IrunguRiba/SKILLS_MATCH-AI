@@ -1,0 +1,164 @@
+.signup-form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Peddana', serif;
+    animation: slideIn 1s ease;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.header h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.googleBtn {
+    background-color: transparent;
+    color: #3f8d50;
+}
+
+.googleBtn i {
+    font-size: 24px;
+    animation: googleColorCycle 4s infinite linear;
+}
+
+.linkedInBtn {
+    background-color: transparent;
+    color: #0077B5;
+}
+
+.linkedInBtn i {
+    font-size: 24px;
+}
+
+.or-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    margin: 20px 0;
+}
+
+.or-separator hr {
+    width: 100vw; 
+    height: 1px;
+    border: none;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.or-separator span {
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.form-heading {
+    font-size: 28px;
+    color: rgb(143, 141, 9);
+    margin-bottom: 20px;
+}
+h4 {
+    font-size: 16px;
+    color: #fff;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.inputField {
+    width: 30%;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #cec0c0;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+
+.text-danger {
+    color: #ff4d4d;
+    font-size: 13px;
+    min-height: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submitBtn {
+    background-color: rgba(5, 7, 18, 0.6);
+    color: wheat;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: rgba(5, 7, 18, 0.9);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes googleColorCycle {
+    0%   { color: #4285F4; }
+    25%  { color: #34A853; }
+    50%  { color: #FBBC05; }
+    75%  { color: #EA4335; }
+    100% { color: #4285F4; }
+}
+@media (max-width: 600px) {
+    .inputField {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

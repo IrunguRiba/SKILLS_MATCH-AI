@@ -6,6 +6,7 @@ import { RecruiterSignUpComponent } from './recruiter-sign-up/recruiter-sign-up.
 import { RecruiterSignInComponent } from './recruiter-sign-in/recruiter-sign-in.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { JobSeekerSignInComponent } from './job-seeker-sign-in/job-seeker-sign-in.component';
+import { AdminSignInPageComponent } from './admin-sign-in-page/admin-sign-in-page.component';
 
 export const routes: Routes = [
   {
@@ -36,4 +37,8 @@ component:JobSeekerSignUpComponent
   path:'forgotPassword',
  component:ForgotPasswordComponent
  },
+ {
+  path:'adminPage',
+  component:AdminSignInPageComponent
+ }
 ];

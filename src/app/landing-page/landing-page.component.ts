@@ -11,6 +11,7 @@ import { routes } from '../app.routes';
   styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent {
+  adminImg:string='admin.png'
   logoImage: string = 'BackgroundImg.png';
   jobSeekerSignUplinkImage: string = 'share.png';
   jobSeekerSignInlinkImage: string = 'share.png';
