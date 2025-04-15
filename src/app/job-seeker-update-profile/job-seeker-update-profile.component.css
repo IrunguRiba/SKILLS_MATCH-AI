@@ -1,0 +1,140 @@
+/* Container with scroll */
+.update-profile-container {
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 40px 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    backdrop-filter: blur(14px);
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  /* Scrollbar styling */
+  .update-profile-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  .update-profile-container::-webkit-scrollbar-thumb {
+    background: #60a5fa;
+    border-radius: 10px;
+  }
+  .update-profile-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #a6d1ff;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  section h3 {
+    color: #60a5fa;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  
+  /* Inputs and Selects */
+  input, select {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input::placeholder {
+    color: #cbd5e1;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px #60a5fa66;
+  }
+  
+  input[readonly], select:disabled {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: not-allowed;
+  }
+  
+  input[type="file"] {
+    padding: 6px 0;
+  }
+  
+  small {
+    display: inline-block;
+    margin-top: 4px;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+  }
+  
+  /* Submit Button */
+  button {
+    margin-top: 40px;
+    width: 100%;
+    padding: 14px;
+    background-color: #60a5fa;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover:enabled {
+    background-color: #3b82f6;
+    transform: translateY(-2px);
+  }
+  
+  button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

@@ -12,6 +12,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AskAiComponent } from './ask-ai/ask-ai.component';
 import { JobSeekerLandingPageNotificationsComponent } from './job-seeker-landing-page-notifications/job-seeker-landing-page-notifications.component';
 import { JobSeekerLandingPageMyFilesComponent } from './job-seeker-landing-page-my-files/job-seeker-landing-page-my-files.component';
+import { JobSeekerUpdateProfileComponent } from './job-seeker-update-profile/job-seeker-update-profile.component';
 
 export const routes: Routes = [
   {
@@ -69,6 +70,9 @@ component:JobSeekerSignUpComponent
 {
   path:'jobSeekerLandingPageMyfiles',
   component:JobSeekerLandingPageMyFilesComponent
+},
+{
+  path:'jobSeekerUpdateProfile',
+  component:JobSeekerUpdateProfileComponent
 }
-
 ];

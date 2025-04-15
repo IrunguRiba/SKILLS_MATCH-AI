@@ -1,0 +1,57 @@
+<div class="update-profile-container">
+    <h2>Update Your Profile</h2>
+  
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="form-grid">
+        <section>
+          <h3>Personal Information</h3>
+          <input formControlName="fullName" placeholder="Full Name" [readonly]="submitted" />
+          <input formControlName="email" placeholder="Email" type="email" [readonly]="submitted" />
+          <input formControlName="phone" placeholder="Phone Number" [readonly]="submitted" />
+          <select formControlName="gender" [disabled]="submitted">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          <input formControlName="dob" type="date" [readonly]="submitted" />
+          <label>Profile Picture</label>
+          <input type="file" (change)="onFileChange($event, 'profileImage')" [disabled]="submitted" />
+          <small *ngIf="profileForm.value.profileImage">{{ profileForm.value.profileImage }}</small>
+        </section>
+        <section>
+          <h3>Address</h3>
+          <input formControlName="country" placeholder="Country" [readonly]="submitted" />
+          <input formControlName="state" placeholder="State / Province" [readonly]="submitted" />
+          <input formControlName="city" placeholder="City" [readonly]="submitted" />
+          <input formControlName="zip" placeholder="Postal Code" [readonly]="submitted" />
+        </section>
+        <section>
+          <h3>Education</h3>
+          <input formControlName="qualification" placeholder="Qualification" [readonly]="submitted" />
+          <input formControlName="institution" placeholder="Institution" [readonly]="submitted" />
+          <input formControlName="fieldOfStudy" placeholder="Field of Study" [readonly]="submitted" />
+          <input formControlName="graduationYear" placeholder="Graduation Year" [readonly]="submitted" />
+        </section>
+        <section>
+          <h3>Work Experience</h3>
+          <input formControlName="jobTitle" placeholder="Job Title" [readonly]="submitted" />
+          <input formControlName="company" placeholder="Company" [readonly]="submitted" />
+          <input formControlName="experienceYears" placeholder="Years of Experience" [readonly]="submitted" />
+          <input formControlName="skills" placeholder="Skills (comma-separated)" [readonly]="submitted" />
+        </section>
+        <section>
+          <h3>Resume & Links</h3>
+          <label>Upload Resume</label>
+          <input type="file" (change)="onFileChange($event, 'resume')" [disabled]="submitted" />
+          <small *ngIf="profileForm.value.resume">{{ profileForm.value.resume }}</small>
+          <input formControlName="linkedin" placeholder="LinkedIn Profile URL" [readonly]="submitted" />
+          <input formControlName="portfolio" placeholder="Portfolio / GitHub" [readonly]="submitted" />
+        </section>
+  
+      </div>
+  
+      <button type="submit" [disabled]="submitted || !profileForm.valid">Save Profile</button>
+    </form>
+  </div>
+  
