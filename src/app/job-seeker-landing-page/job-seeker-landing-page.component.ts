@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'app-job-seeker-landing-page',
-  imports: [],
   templateUrl: './job-seeker-landing-page.component.html',
-  styleUrl: './job-seeker-landing-page.component.css'
+  styleUrls: ['./job-seeker-landing-page.component.css'],
+  imports: [CommonModule] 
 })
 export class JobSeekerLandingPageComponent {
-logoImage:string='BackgroundImg.png'
-userProfile:string='user.png'
+  menuExpanded: boolean = false;
+
+  logoImage: string = 'BackgroundImg.png'; 
+  userProfile: string = 'user.png'; 
+
+  toggleMenu(): void {
+    this.menuExpanded = !this.menuExpanded;
+  }
 }

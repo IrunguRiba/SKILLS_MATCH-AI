@@ -24,3 +24,67 @@
     <button class="nav-btn"><i class="fas fa-bell"></i> NOTIFICATIONS</button>
     <button class="nav-btn"><i class="fas fa-folder-open"></i> MY FILES</button>
   </nav>
+
+<div class="searchJobs">
+  <input type="text" placeholder="Job Title or Keyword" class="searchInput" />
+  <button class="searchButton">Search</button>
+</div>
+<main class="mainLayout">
+  <div class="rightSection">
+    <h3><i class="fas fa-bookmark"></i> Saved Jobs</h3>
+  </div>
+  <div class="leftSection">
+    <h3><i class="fas fa-history"></i> Recent Jobs</h3>
+  </div>
+</main>
+
+<div class="sidebar" [class.expanded]="menuExpanded">
+  <button 
+    *ngIf="!menuExpanded"
+    class="menuToggle"
+    (click)="toggleMenu()"
+    aria-label="Open Menu"
+  >
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <button 
+    *ngIf="menuExpanded"
+    class="closeToggle"
+    (click)="toggleMenu()"
+    aria-label="Close Menu"
+  >
+    <i class="fas fa-times"></i>
+  </button>
+
+  <ul class="menuList">
+
+    <li><i class="fas fa-tachometer-alt"></i> <span *ngIf="menuExpanded">Dashboard</span></li>
+    <li><i class="fas fa-bell"></i> <span *ngIf="menuExpanded">Job Alerts</span></li>
+    <li><i class="fas fa-lightbulb"></i> <span *ngIf="menuExpanded">Skill Profile</span></li>
+    <li><i class="fas fa-route"></i> <span *ngIf="menuExpanded">Career Path</span></li>
+    <li><i class="fas fa-file-alt"></i> <span *ngIf="menuExpanded">My CV</span></li>
+    <li><i class="fas fa-comments"></i> <span *ngIf="menuExpanded">Interview Prep</span></li>
+    <li><i class="fas fa-stream"></i> <span *ngIf="menuExpanded">Activity Feed</span></li>
+    <li><i class="fas fa-chart-line"></i> <span *ngIf="menuExpanded">Statistics</span></li>
+    <li><i class="fas fa-question-circle"></i> <span *ngIf="menuExpanded">Help</span></li>
+    <li><i class="fas fa-newspaper"></i> <span *ngIf="menuExpanded">News</span></li>
+  </ul>
+</div>
+<div class="chatbot-container">
+  <div class="chatbot-header">
+    <i class="fas fa-robot"></i>
+    <span class="chatbot-title"></span>
+  </div>
+  <div class="chatbot-messages">
+    <div class="message bot">Hi!</div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" placeholder="Ask Anything..." />
+    <button><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+
+
+
