@@ -1,0 +1,13 @@
+<div class="notifications-container">
+    <h2>Notifications</h2>
+  
+    <div class="notification-card" *ngFor="let notification of notifications">
+      <div class="notification-icon">🔔</div>
+      <div class="notification-content">
+        <h4>{{ notification.title }}</h4>
+        <p>{{ notification.message }}</p>
+        <span class="timestamp">{{ notification.time }}</span>
+      </div>
+    </div>
+  </div>
+  

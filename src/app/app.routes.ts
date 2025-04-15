@@ -9,6 +9,9 @@ import { JobSeekerSignInComponent } from './job-seeker-sign-in/job-seeker-sign-i
 import { AdminSignInPageComponent } from './admin-sign-in-page/admin-sign-in-page.component';
 import { JobSeekerLandingPageComponent } from './job-seeker-landing-page/job-seeker-landing-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AskAiComponent } from './ask-ai/ask-ai.component';
+import { JobSeekerLandingPageNotificationsComponent } from './job-seeker-landing-page-notifications/job-seeker-landing-page-notifications.component';
+import { JobSeekerLandingPageMyFilesComponent } from './job-seeker-landing-page-my-files/job-seeker-landing-page-my-files.component';
 
 export const routes: Routes = [
   {
@@ -54,5 +57,18 @@ component:JobSeekerSignUpComponent
  {
   path:'jobSeekerLandingPage',
   component:JobSeekerLandingPageComponent
- }
+ },
+ {
+  path:'askAi',
+  component:AskAiComponent
+ },
+{
+  path:'jobSeekerNotifications',
+  component:JobSeekerLandingPageNotificationsComponent
+},
+{
+  path:'jobSeekerLandingPageMyfiles',
+  component:JobSeekerLandingPageMyFilesComponent
+}
+
 ];

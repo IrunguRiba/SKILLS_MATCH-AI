@@ -1,0 +1,43 @@
+<div class="files-container">
+    <h2>My Files</h2>
+  
+    <input type="file" #fileInput (change)="onFileSelected($event)" hidden>
+    <button class="upload-btn" (click)="triggerFileInput()">Upload File</button>
+  
+    <!-- Upload Form -->
+    <div class="upload-form" *ngIf="showForm">
+      <form [formGroup]="fileForm" (ngSubmit)="submitFile()">
+        <h3>Add File Details</h3>
+  
+        <label>Title</label>
+        <input formControlName="title" type="text" placeholder="Enter file title" required>
+  
+        <label>Description</label>
+        <textarea formControlName="description" placeholder="Enter description"></textarea>
+  
+        <div class="form-actions">
+          <button type="submit" [disabled]="fileForm.invalid">Submit</button>
+          <button type="button" class="cancel" (click)="cancelUpload()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  
+    <div *ngIf="files.length === 0" class="no-files">
+      No files uploaded yet.
+    </div>
+  
+    <div *ngIf="files.length > 0" class="files-wrapper">
+      <div class="file-list">
+        <div *ngFor="let file of files" class="file-item">
+          <div class="file-info">
+            <span class="file-title"><i class="fas fa-file-alt"></i> {{ file.title }}</span>
+            <span class="file-description">{{ file.description }}</span>
+            <span class="file-name">{{ file.name }}</span>
+            <span class="file-size">{{ file.size / 1024 | number: '1.0-0' }} KB</span>
+          </div>
+          <button class="delete-btn" (click)="deleteFile(file)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

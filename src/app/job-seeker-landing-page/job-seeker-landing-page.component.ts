@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-job-seeker-landing-page',
   templateUrl: './job-seeker-landing-page.component.html',
   styleUrls: ['./job-seeker-landing-page.component.css'],
-  imports: [CommonModule] 
+  imports: [CommonModule, ReactiveFormsModule, RouterModule] 
 })
 export class JobSeekerLandingPageComponent {
   menuExpanded: boolean = false;

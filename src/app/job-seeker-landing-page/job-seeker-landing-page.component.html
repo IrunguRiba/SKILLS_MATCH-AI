@@ -20,9 +20,9 @@
 </header>
   <nav class="navbar">
     <button class="nav-btn"><i class="fas fa-home"></i> HOME</button>
-    <button class="nav-btn"><i class="fas fa-robot"></i> ASK AI</button>
-    <button class="nav-btn"><i class="fas fa-bell"></i> NOTIFICATIONS</button>
-    <button class="nav-btn"><i class="fas fa-folder-open"></i> MY FILES</button>
+    <button class="nav-btn" [routerLink]="['/askAi']"><i class="fas fa-robot"></i> ASK AI</button>    
+    <button class="nav-btn" [routerLink]="['/jobSeekerNotifications']"><i class="fas fa-bell"></i> NOTIFICATIONS</button>
+    <button class="nav-btn" [routerLink]="['/jobSeekerLandingPageMyfiles']"><i class="fas fa-folder-open"></i> MY FILES</button>
   </nav>
 
 <div class="searchJobs">
@@ -80,7 +80,9 @@
     <div class="message bot">Hi!</div>
   </div>
   <div class="chatbot-input">
-    <input type="text" placeholder="Ask Anything..." />
+    <input type="text" placeholder="Ask Anything
+    
+    ..." />
     <button><i class="fas fa-paper-plane"></i></button>
   </div>
 </div>
