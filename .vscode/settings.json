@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5000,
+            "driver": "PostgreSQL",
+            "name": "SkillMatch_AI",
+            "group": "SkillMatch AI Databases",
+            "database": "skillmatch_ai",
+            "username": "irungu"
+        }
+    ]
+}
