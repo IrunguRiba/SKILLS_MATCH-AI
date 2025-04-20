@@ -1,8 +1,11 @@
-import { Router } from 'express';
-import { login } from '../controllers/adminController';
+import express from 'express';
+import { signup, login, getAdmin, deleteAdmin } from '../controllers/adminController';
 
-const adminRouter = Router();
+const router = express.Router();
 
-adminRouter.post('/login', login);
+router.post('/signup', signup);
+router.post('/login', login);
+router.get('/', getAdmin);        
+router.delete('/', deleteAdmin);  
 
-export default adminRouter;
+export default router;
