@@ -1,9 +1,11 @@
-import { Router } from 'express';
-import { signup, login } from '../controllers/jobseekerController';
+import express from 'express';
+import { signup, login, getJobSeeker, deleteJobSeeker } from '../controllers/jobseekerauthController';
 
-const jobSeekerrouter = Router();
+const jobSeekerrouter = express.Router();
 
 jobSeekerrouter.post('/signup', signup);
 jobSeekerrouter.post('/login', login);
+jobSeekerrouter.get('/', getJobSeeker);          
+jobSeekerrouter.delete('/', deleteJobSeeker);    
 
 export default jobSeekerrouter;

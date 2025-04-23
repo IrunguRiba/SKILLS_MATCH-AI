@@ -9,6 +9,16 @@
             "group": "SkillMatch AI Databases",
             "database": "skillmatch_ai",
             "username": "irungu"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5000,
+            "driver": "PostgreSQL",
+            "name": "new db skillmatchai",
+            "group": "skillmatch",
+            "database": "postgres",
+            "username": "irungu"
         }
     ]
 }
