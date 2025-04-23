@@ -8,7 +8,8 @@ const SALT_ROUNDS = 12;
 
 // POST 
 export const signup = async (req: Request, res: Response): Promise<void> => {
-  try {
+  try { 
+    
     const { username, password, email, full_name, is_super_admin = false }: AdminSignupData = req.body;
 
     if (!username || !password || !email || !full_name) {

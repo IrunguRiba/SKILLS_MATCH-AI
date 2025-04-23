@@ -1,4 +1,4 @@
-import { Recruiter } from './recruiter';
+import { Recruiter } from '../../types/recruiter';
 
 declare global {
   namespace Express {

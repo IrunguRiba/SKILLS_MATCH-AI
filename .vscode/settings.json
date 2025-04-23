@@ -20,5 +20,6 @@
             "database": "postgres",
             "username": "irungu"
         }
-    ]
+    ],
+    "postman.settings.dotenv-detection-notification-visibility": false
 }

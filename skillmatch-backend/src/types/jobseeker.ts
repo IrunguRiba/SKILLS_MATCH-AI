@@ -14,7 +14,6 @@ export interface JobSeeker {
     name: string;
     skills: string[];
     first_name: string;
-    city:string;
     last_name: string;
     county:string;
   }

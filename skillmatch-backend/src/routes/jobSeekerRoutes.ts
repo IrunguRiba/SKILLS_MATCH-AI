@@ -1,5 +1,5 @@
 import express from 'express';
-import { signup, login, getJobSeeker, deleteJobSeeker } from '../controllers/jobseekerauthController';
+import { signup, login, getJobSeeker, deleteJobSeeker } from '../controllers/jobseekerController';
 
 const jobSeekerrouter = express.Router();
 

@@ -2,14 +2,14 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node"
   },
-  "include": ["src/**/*", "src/server.ts"],
+  "include": ["src/**/*", "src/server.ts", "src/services", "src/types/job.ts", "src/types/notification.ts", "src/types"],
   "exclude": ["node_modules"]
 }

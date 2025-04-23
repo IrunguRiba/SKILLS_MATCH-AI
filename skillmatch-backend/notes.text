@@ -1,0 +1,19 @@
+http://localhost:3000/api/recruiters/signup
+http://localhost:4000/api/recruiters/login
+http://localhost:4000/api/recruiters/get?id=2
+http://localhost:4000/api/recruiters/delete?id=3
+
+//RUNNING 3000
+ 
+http://localhost:4000/api/job-seekers?id=7
+http://localhost:4000/api/job-seekers/signup
+http://localhost:4000/api/job-seekers/login
+http://localhost:4000/api/job-seekers?id=4  delete
+
+
+http://localhost:4000/api/admins?id=7 delete
+http://localhost:4000/api/admins?id=7
+http://localhost:4000/api/admins/signup
+http://localhost:4000/api/admins/login
+
+
